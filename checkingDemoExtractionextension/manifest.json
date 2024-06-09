@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "My ext",
+  "version": "1.0",
+  "description": "my desc",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "commands",
+    "storage",
+    "tabs"
+  ],
+  "background": {
+    "service_worker": "background.js"
+},
+  "icons": {
+    "128": "icons/jobs.png"
+},
+"content_scripts": [
+  {
+    "matches": ["<all_urls>"],
+    "js": ["content_script.js"]
+  }
+],
+  "action": {
+      "default_title": "My ext",
+      "default_icon": "icons/jobs.png",
+      "default_popup": "popup.html"
+     
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' ; object-src 'self';"
+  },
+   "commands": {
+    "increment": {
+      "suggested_key": "Alt+A",
+      "description": "increment counter"
+    }
+  }
+}
