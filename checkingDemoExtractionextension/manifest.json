@@ -14,7 +14,7 @@
     "service_worker": "background.js"
 },
   "icons": {
-    "128": "icons/jobs.png"
+    "128": "icons/logo.png"
 },
 "content_scripts": [
   {
@@ -24,7 +24,7 @@
 ],
   "action": {
       "default_title": "My ext",
-      "default_icon": "icons/jobs.png",
+      "default_icon": "icons/logo.png",
       "default_popup": "popup.html"
      
   },
