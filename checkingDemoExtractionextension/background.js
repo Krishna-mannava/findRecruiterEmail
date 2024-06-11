@@ -99,9 +99,7 @@ async function splitFullName(fullName) {
     return { firstName, lastName };
 }
 
-// Example usage: patGCy3qufjkVYBnM.769a16b3d21775f98901509793612a2a78f32361944908331ebe16ea4b1bd9fc
-// apptPOFAJKH4p4gjY
-//tbl9rGuWxEVU3Re0y
+// Example usage:
 
 // Function to push data to Airtable
 async function pushDataToAirtable(data,email) {
@@ -144,7 +142,7 @@ async function getMailFromApi(data){
     const options = {
         method: 'GET',
         headers: {
-          'X-Access-Key': '202542163CyunAo4pPqOmlMAC5g8TLRl4JyyfxFXEH',
+          'X-Access-Key': '',
           'Content-Type': 'application/json'
         }
       };
