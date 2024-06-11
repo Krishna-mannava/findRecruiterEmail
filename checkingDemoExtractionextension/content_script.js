@@ -32,19 +32,26 @@ function extractName() {
 }
 
 function extractCompanyName(){
-    var companyName1 = document.querySelector("#profile-content > div > div.scaffold-layout.scaffold-layout--breakpoint-xl.scaffold-layout--main-aside.scaffold-layout--reflow.pv-profile.pvs-loader-wrapper__shimmer--animate > div > div > main > section.artdeco-card.ySzQpXqkebeCxbOvlmOuLsAiHfBHxzsONc > div.ph5.pb5 > div.mt2.relative > ul > li:nth-child(1) > button > span > div");
-    var companyName2 = document.querySelector("#profile-content > div > div.scaffold-layout.scaffold-layout--breakpoint-xl.scaffold-layout--main-aside.scaffold-layout--reflow.pv-profile.pvs-loader-wrapper__shimmer--animate > div > div > main > section.artdeco-card.ySzQpXqkebeCxbOvlmOuLsAiHfBHxzsONc > div.ph5 > div.mt2.relative > ul > li > button > span > div");
-    if(companyName1 == null && companyName2==null){
+    //var companyName1 = document.querySelector("#profile-content > div > div.scaffold-layout.scaffold-layout--breakpoint-xl.scaffold-layout--main-aside.scaffold-layout--reflow.pv-profile.pvs-loader-wrapper__shimmer--animate > div > div > main > section.artdeco-card.ySzQpXqkebeCxbOvlmOuLsAiHfBHxzsONc > div.ph5.pb5 > div.mt2.relative > ul > li:nth-child(1) > button > span > div");
+    //var companyName2 = document.querySelector("#profile-content > div > div.scaffold-layout.scaffold-layout--breakpoint-xl.scaffold-layout--main-aside.scaffold-layout--reflow.pv-profile.pvs-loader-wrapper__shimmer--animate > div > div > main > section.artdeco-card.ySzQpXqkebeCxbOvlmOuLsAiHfBHxzsONc > div.ph5 > div.mt2.relative > ul > li > button > span > div");
+    var companyXpath = document.evaluate("//*[@id='profile-content']/div/div[2]/div/div/main/section[1]/div[2]/div[2]/ul/li[1]/button/span/div", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+    if (companyXpath && companyXpath.singleNodeValue) {
+        // Access the text content of the found element
+        return companyXpath.singleNodeValue.textContent.trim();
+    } else {
         return "empty";
     }
-    else
-    {
-        if(companyName1 != null){
-            return companyName1.innerText;
-        }
-        else{
+    // if(companyName1 == null && companyName2==null){
+    //     return "empty";
+    // }
+    // else
+    // {
+    //     if(companyName1 != null){
+    //         return companyName1.innerText;
+    //     }
+    //     else{
 
-            return companyName2.innerText;
-        }
-    }
+    //         return companyName2.innerText;
+    //     }
+    // }
 }
