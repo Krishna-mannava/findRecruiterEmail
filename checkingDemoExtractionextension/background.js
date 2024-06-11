@@ -99,13 +99,15 @@ async function splitFullName(fullName) {
     return { firstName, lastName };
 }
 
-// Example usage:
+// Example usage: patGCy3qufjkVYBnM.769a16b3d21775f98901509793612a2a78f32361944908331ebe16ea4b1bd9fc
+// apptPOFAJKH4p4gjY
+//tbl9rGuWxEVU3Re0y
 
 // Function to push data to Airtable
 async function pushDataToAirtable(data,email) {
-    const token = 'patGCy3qufjkVYBnM.769a16b3d21775f98901509793612a2a78f32361944908331ebe16ea4b1bd9fc'; // Replace with your Airtable API key
-    const baseId = 'apptPOFAJKH4p4gjY'; // Replace with your Airtable Base ID
-    const tableId = 'tbl9rGuWxEVU3Re0y'; // Replace with your Airtable Table name
+    const token = ''; // Replace with your Airtable API key
+    const baseId = ''; // Replace with your Airtable Base ID
+    const tableId = ''; // Replace with your Airtable Table name
 
     const url = `https://api.airtable.com/v0/${baseId}/${tableId}`;
     const options = {
